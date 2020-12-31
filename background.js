@@ -612,7 +612,7 @@ function processTeamsData()
 		
 		g_csv += tline.board + "," + lookupAlias(tline.north) + "," + lookupAlias(tline.south) + "," + lookupAlias(tline.east) + "," + lookupAlias(tline.west) + ",";
 		g_csv += tline.result + "," + tline.contract + "," + tline.declarer + "," + tline.tricks + ",";
-		g_csv += tline.lead + "," + tline.numscore + "," + tline.score + "," + "" + "," + "" + "," + "" + "," + nspair + "," + ewpair + "," + "1" + "," + "\"" + tline.lin.replace(/;/g,",") +"\"" + "\n";
+		g_csv += tline.lead + "," + tline.numscore + "," + tline.score + "," + "" + "," + "" + "," + "" + "," + nspair + "," + ewpair + "," + "1" + "," + "\"" + tline.lin.replace(/;/g,",") +"\"" + "," + tline.tdate + "\n";
 	}
 }
 
@@ -1272,7 +1272,7 @@ function formatTravellerLines()
 	if (g_scoringType=="CROSS_IMPS")
 		colstr = "nsXimps,ewXimps";
 		
-	g_csv += "#Board,North,South,East,West,Result,Contract,Declarer,Tricks,Lead,Score,Percent," + colstr + ",calcPercent,nsPair,ewPair,section,playdata" + "\n";
+	g_csv += "#Board,North,South,East,West,Result,Contract,Declarer,Tricks,Lead,Score,Percent," + colstr + ",calcPercent,nsPair,ewPair,section,playdata,tdate" + "\n";
 	
 	for (var i=0;i<g_tlines.length;i++)
 	{
@@ -1300,7 +1300,7 @@ function formatTravellerLines()
 		
 		str += t.board + "," + lookupAlias(t.north) + "," + lookupAlias(t.south) + "," + lookupAlias(t.east) + "," + lookupAlias(t.west) + ",";
 		str += t.result + "," + contract + "," + t.declarer + "," + t.tricks + "," + t.lead + "," + numscore + "," + t.score + ",";
-		str += t.mpNS + "," + t.mpEW + "," + t.percent + "," + t.nspair + "," + t.ewpair + "," + t.section + "," + "\"" + t.lin.replace(/;/g,",") +"\"" + "\n";
+		str += t.mpNS + "," + t.mpEW + "," + t.percent + "," + t.nspair + "," + t.ewpair + "," + t.section + "," + "\"" + t.lin.replace(/;/g,",") +"\"" + "," +  t.tdate + "\n";
 	}
 	
 	g_csv += str;
@@ -1910,6 +1910,7 @@ function storetlines(data)
 		tline.numscore = trow[10];
 		tline.score = trow[11];
 		tline.lin = trow[12];
+		tline.tdate = trow[13];
 		tline.section = "";	// The value is now left blank ! (the BBO travellers do not contain a section field)
 		
 		storeBoard(tline.lin);

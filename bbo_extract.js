@@ -248,7 +248,7 @@
 					
 					lindata = lindata.replace(/,/g,";");
 					lindata = lindata.replace(/%7C/g,"|");
-					resstr += board + "," + north + "," + south + "," + east + "," + west + "," + result + "," + contract + "," + declarer + "," + tricks + "," + lead + "," + numscore + "," + score + "," + lindata + "\n";
+					resstr += board + "," + north + "," + south + "," + east + "," + west + "," + result + "," + contract + "," + declarer + "," + tricks + "," + lead + "," + numscore + "," + score + "," + lindata + "," + tdate + "\n";
 				}
 				
 				var results = new Object();

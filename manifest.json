@@ -8,15 +8,15 @@
       "default_icon": "icon.png",
       "default_title": "BBO Extractor\n\n- Click to extract results from a BBO Tournament Page"
    },
-   "description": "This extension extract the results for a BBO Tournament",
+   "description": "This extension extracts the results for a BBO Tournament",
    "icons": {
       "128": "icon128.png",
       "48": "icon48.png"
    },
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgYjmUl4WrmeEiDg4pvTfDkTm576TmlkppQfUQLYYs2QYTHnwiT+I+8L+oqdGlvzFuEkNO56HavLQWiy2JW/ERR/QVvr1FsqE+DuKbsUYJYelp4cG6NVFFDEMG+c4gp4xuwhlsR5WCPyEyUBpLEknazaJJb04YIyQ87ribvkGOyKJW525YvXtysNS12kCHYXmEgYrNDrIrInaS+s0XwAgsWP8V8yqBL5CommB5uApFn75oRW6pqIH1jEMrd2pRKV/PQuEnZ8mpLP3x9WLt5KCpPLNES+GiN7cxv2Zz4VbsGQSz3fRmU/GTatfz32rdkZ3EJmVmoAeHJjuyBaipgumkwIDAQAB",
    "manifest_version": 2,
-   "name": "BBO Extractor",
+   "name": "BBO Extractor-criptik",
    "permissions": [ "cookies", "notifications", "http://bridgebase.com/*", "https://bridgebase.com/*", "http://www.bridgebase.com/*", "https://www.bridgebase.com/*", "http://webutil.bridgebase.com/*", "https://webutil.bridgebase.com/*", "file:///*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "1.3.8"
+   "version": "1.3.8.901"
 }
